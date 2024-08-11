@@ -3,6 +3,7 @@ SHELL=bash
 DIRS = cgen cpp cref dehuff dump enhuff hidump hidump2 libr \
        libr4 link mkpat objtohex optim p1 zas zas4 zc
 all:
+	@mkdir -p Install
 	@for f in $(DIRS); do $(MAKE) -C $$f || exit 1; done;
 
 build:
